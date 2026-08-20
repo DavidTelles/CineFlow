@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function RegisterPage() {
     const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     const EyeIcon = (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
@@ -18,18 +19,32 @@ export default function RegisterPage() {
         </svg>
     );
 
-    const inputStyle = "w-full p-2 border-b-2 outline-none bg-transparent transition-colors duration-200 border-slate-300 focus:border-indigo-600 text-slate-800 placeholder-slate-400 dark:border-white/50 dark:focus:border-white dark:text-white dark:placeholder-white/70";
+    const inputStyle = "w-full p-2 border-b-2 outline-none bg-transparent transition-colors duration-200 border-slate-300 focus:border-indigo-600 text-black placeholder-slate-400 dark:border-white/50 dark:focus:border-white dark:text-white dark:placeholder-white/70";
 
     return (
-        <main className="min-h-screen flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-950 transition-colors duration-300">
-            <div className="w-full max-w-200 bg-white/80 dark:bg-sky-900/40 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 flex flex-row items-center transition-colors duration-300">
+        <main className="min-h-screen flex items-center justify-center p-4">
+            <div className="w-full max-w-7xl min-h-160 bg-white/42 dark:bg-black/10 backdrop-blur-md rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 flex overflow-hidden transition-colors duration-300">
 
-                <img src="https://png.pngtree.com/png-vector/20231114/ourmid/pngtree-sunglasses-character-red-cyan-png-image_10528001.png" alt="Imagem" />
+                <div className=" flex items-center justify-center relative w-1/2 overflow-hidden">
+                    <img
+                        src="/img-register-login.png"
+                        alt=""
+                        className="bg-[10px] object-cover object-center"
+                    />
+                </div>
 
-                <form className="flex flex-col w-full gap-5 text-center">
-                    <h1 className="text-3xl font-bold text-slate-800 dark:text-white mb-6 tracking-wide">
+                <form className="flex flex-col w-1/2 gap-5 p-10 text-center justify-center text-black dark:text-white">
+                    <h1 className="text-3xl font-bold mb-6 tracking-wide">
                         Login
                     </h1>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name"
+                        className={inputStyle}
+                        required
+                    />
 
                     <input
                         type="email"

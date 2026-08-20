@@ -28,8 +28,8 @@ export default function TopbarPublic() {
     )
 
     return (
-        <header className="fixed top-0 left-0 w-full flex items-center justify-between p-5 bg-gray-200 text-gray-900 dark:bg-gray-900/70 dark:text-white backdrop-blur-md shadow-xl transition-colors duration-300 z-50">
-            <h1 className="font-sans text-3xl font-bold">Cineflow</h1>
+        <header className="fixed top-0 left-0 w-full flex items-center justify-between p-5 bg-white/42 text-gray-900 dark:bg-gray-900/70 dark:text-white backdrop-blur-md shadow-xl transition-colors duration-300 z-50">
+            <h1 className="font-sans text-3xl font-bold"><a href="/">Cine<span className="text-red-800">flow</span></a></h1>
 
             <nav className="flex items-center gap-4">
                 <button
